@@ -14,7 +14,7 @@ return [
     */
 
     'stateful' => [
-        'localhost',
+        'localhost', 'localhost:8080',
     ],
 
 ];

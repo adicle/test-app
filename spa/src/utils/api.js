@@ -24,7 +24,7 @@ class Api {
     }
 
     initiate() {
-        return this.axios.get(BASE_CSRF_COOKIE);
+        return axios.get(BASE_CSRF_COOKIE);
     }
 
     /**
@@ -35,9 +35,7 @@ class Api {
      * @param {Object} data 
      */
     request(method, path, data = {}) {
-        return this.initiate().then(() => {
-            return this.axios[method](`${BASE_URL}/${path}`, data);
-        });
+        return this.axios[method](`${BASE_URL}/${path}`, data);
     }
     
 }

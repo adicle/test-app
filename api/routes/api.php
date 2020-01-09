@@ -21,5 +21,8 @@ Route::middleware('auth:airlock')->get('user', function(Request $request) {
 
 Route::prefix('auth')
     ->group(function() {
+        Route::get('test', function() {
+            return response()->json(['test' => 'test']);
+        });
         Route::post('login', [AuthController::class, 'login']);
     });

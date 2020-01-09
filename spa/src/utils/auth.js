@@ -9,7 +9,9 @@ class Auth {
      */
     login(payload) {
         // Return api request promise
-        return Api.request('post', 'auth/login', payload);
+        return Api.initiate().catch(() => {
+            return Api.request('post', 'auth/login', payload);
+        });
     }
 
 }

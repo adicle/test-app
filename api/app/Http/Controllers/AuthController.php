@@ -12,7 +12,7 @@ class AuthController extends Controller {
     {
         $credentials = ['email' => $request->email, 'password' => $request->password];
 
-        if(Auth::attempt($credentials)) {
+        if(Auth::guard('api')->attempt($credentials)) {
             return response()->json(['message' => 'Success'], 200);
         }
 

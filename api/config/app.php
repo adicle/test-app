@@ -165,6 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
+        Laravel\Airlock\AirlockServiceProvider::class,
 
         /*
          * Application Service Providers...
